@@ -10,7 +10,6 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
 }
 
 .button {
@@ -33,13 +32,6 @@ p {
     font-size: 1.2rem;
     margin: 2rem 0;
 }
-
-/************* classi debug *************/
-
-:root {
-    --bordo: 2px dashed black;
-}
-
 /************* HEADER *************/
 
 header {
@@ -79,6 +71,7 @@ header {
     min-height: 20rem;
     margin-top: 0.5rem;
     padding: 0 20%;
+    align-items: center;
 }
 
 .quadrato-viola {
@@ -116,14 +109,26 @@ header {
     padding: 1rem 10%;
 }
 
-/***************** MAIN / BLOCCHI SUCCESSIVI AL PRIMO *****************/
-
-main > div:nth-child(even) {
-    background-color: rgba(246,246,246,255);
+.wave-img {
+    background-size: cover;
+    width: 100%;
+    opacity: 0.1;
+    margin-bottom: -4px;
 }
+
+.wave-img-rotate {
+    transform: rotate(180deg);
+    background-size: cover;
+    width: 100%;
+    opacity: 0.1;
+    margin-bottom: -4px;
+}
+
+/***************** MAIN / BLOCCHI SUCCESSIVI AL PRIMO *****************/
 
 .reverse {
     flex-direction: row-reverse;
+    background-color: #e5e5e5;
 }
 
 .quadrato-verde {
@@ -153,44 +158,111 @@ footer {
 }
 
 .ultimo-riquadro {
-    min-height: 20rem;
-    padding: 0.5rem 10%;
-    /* justify-content: center; */
+    /* min-height: 20rem; */
+    padding: 4rem 10% 1rem 10%;
+
 }
 
 .colonna-large {
-    min-height: 20rem;
-    width: 50%;
-    background-color: pink;
-    border: var(--bordo);
+    min-width: 30% ;
+}
+
+.colonna-large > h2 {
+    color: rgba(114,137,218,255);
+    font-size: 2.5rem;
+}
+
+.colonna-large > a {
+    margin: 0.5rem;
+    color: white;
 }
 
 .second-part {
+    align-items: flex-start;
     width: 100%;
 }
 
 .colonna-small {
-    min-height: 20rem;
-    width: 25%;
-    background-color: blue;
-    border: var(--bordo);
+    min-width: 25%;
 }
 
-hr {
+.colonna-small > h3 {
+    color: rgba(114,137,218,255);
+}
+
+.colonna-small > a {
+    display: block;
     margin: 1rem 0;
+    color: white;
+    text-decoration: none;
 }
 
 .end-bar {
-    background-color: lightgreen;
-    width: 80%;
-    height: 3rem;
-    /* justify-content: space-between;
-    align-items: center; */
+    max-width: 80%;
+    justify-content: space-between;
+    align-items: center;
     margin: 0 auto;
+    border-top: 2px solid white;
+    padding-top: 1rem;
 }
 
-button {
-    border: var(--bordo);
-    height: 50%;
-    width: 10%;
+.end-bar a:nth-child(2) {
+    background-color: rgba(114,137,218,255);
+    color: white;
 }
+
+/***************** MENù TENDINA *****************/
+
+.logo-ita {
+    max-width: 10%;
+}
+
+span {
+    color: white;
+    display: inline-block;
+    margin-left: 0.5rem;
+    font-size: 1.2rem;
+}
+
+#hormenu {
+    margin: 1rem 0;
+    }
+
+div#hormenu ul {
+    list-style-type: none;
+}
+
+div#hormenu a
+{
+display: block;
+padding: 5px;
+color: #000;
+text-decoration: none;
+}
+
+div#hormenu a:hover
+{
+background-color: #000033;
+color: #FFFFFF;
+text-decoration: none;
+}
+
+div#hormenu li ul
+{
+display: none
+}
+
+div#hormenu li:hover ul
+{
+display: block;
+position: absolute;
+z-index:1;
+width:150px;
+padding: 0;
+margin: 0 0 0 -1px;
+border:1px solid black;
+background: white;
+}
+
+div#hormenu li li { border:none; width:150px; }
+div#hormenu li li a { padding:2px 2px 2px 10px; }
