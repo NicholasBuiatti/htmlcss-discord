@@ -23,6 +23,17 @@
     font-size: 1.3rem;
 }
 
+h1 {
+    font-size: 2.5rem;
+    text-align: center; 
+}
+
+p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 2rem 0;
+}
+
 /************* classi debug *************/
 
 :root {
@@ -75,16 +86,11 @@ header {
 }
 
 .quadrato-viola > h1 {
-    font-size: 3.5rem;
     color: white;
-    text-align: center;
 }
 
 .quadrato-viola > p {
     color: white;
-    text-align: center;
-    font-size: 1.5rem;
-    margin: 2rem 0;
 }
 
 .download {
@@ -110,23 +116,10 @@ header {
     padding: 1rem 10%;
 }
 
-.colonna-left {
-    min-height: 20rem;
-    width: 60%;
-    background-color: blue;
-    border: var(--bordo);
-}
-.colonna-right {
-    min-height: 20rem;
-    width: 40%;
-    background-color: pink;
-    border: var(--bordo);
-}
-
 /***************** MAIN / BLOCCHI SUCCESSIVI AL PRIMO *****************/
 
 main > div:nth-child(even) {
-    background-color: lightgrey;
+    background-color: rgba(246,246,246,255);
 }
 
 .reverse {
@@ -134,11 +127,23 @@ main > div:nth-child(even) {
 }
 
 .quadrato-verde {
-    min-height: 20rem;
-    width: 100%;
-    background-color: green;
-    border: var(--bordo);
     margin: 0.5rem 0;
+}
+
+.quadrato-verde > img {
+    width: 100%;
+}
+
+.con-sfondo {
+    background-image: url(../img/stars.svg);
+    margin: 0 15rem;
+    background-size: cover;
+}
+
+ .quadrato-verde a {
+    background-color: rgba(114,137,218,255);
+    color: white;
+    margin-top: 1.5rem;
 }
 
 /***************** FOOTER *****************/
