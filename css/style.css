@@ -160,6 +160,7 @@ footer {
 .ultimo-riquadro {
     /* min-height: 20rem; */
     padding: 4rem 10% 1rem 10%;
+    align-items: flex-start;
 
 }
 
